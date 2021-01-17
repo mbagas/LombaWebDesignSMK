@@ -1,0 +1,271 @@
+body{
+  margin: 0;
+  /* background-color: #dadada; */
+}
+
+/* scrollbar style */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:hover {
+  z-index: 1001;
+  /* width: 16px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background-color: transparent;
+  /* border-radius: 5px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #737070;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #535557;
+}
+
+/* navbar style */
+.nav{
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0 , 0 , 0 , 0.2);
+}
+
+/* logo in navbar */
+.nav .logo{
+  display: block;
+  float: left;
+  font-family: 'Titillium Web', sans-serif;
+  padding: 14px;
+  text-decoration: none;
+  color: #126493;
+  font-weight: 600;
+  font-size: 20px;
+}
+.logo span{
+  font-size: 30px;
+  color: orange;
+}
+
+.nav .link{
+  display: block;
+  width: 87px;
+  float: right;
+  text-align: center;
+}
+
+.nav .icon{
+  display: none;
+}
+
+/* this is navbar link */
+.nav .link .nav-link{
+  display: inline-block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+  padding: 23px 0px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid transparent;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.nav .link .nav-link:hover{
+  padding: 23px 12px;
+  color: #197eb1;
+  border-bottom: 3px solid #1992cf;
+}
+
+/* footer */
+.foot{
+  width: 100%;
+  position: static;
+  background-color: black;
+  box-sizing: border-box;
+  /* text-align: center; */
+  /* padding: 60px 0px 20px; */
+  /* margin-top: 80px; */
+  clear: left;
+  clear: right;
+}
+
+.footer-content{
+  padding: 60px 0px;
+  background-color: #292b2b;
+}
+
+.foot .footer-widget .header-foot{
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+}
+
+.foot a,
+.foot .content-foot{
+  line-height: 1.5;
+  font-size: 15px;
+  font-family: 'Muli', sans-serif;
+  color: #a5aaa2;
+  text-decoration: none;
+  text-align: justify;
+}
+
+.foot .footer-widget .text{
+  padding-right: 70px;
+}
+
+.foot a:hover{
+  color: #807a7a;
+}
+
+.foot img{
+  margin: 0px 10px 10px 0px;
+  float: left;
+  transition: 0.4s;
+}
+
+.foot img:hover{
+  opacity: 0.8;
+}
+
+/* this is copyright */
+.foot .copyright{
+  color: white;
+  background-color: #126493;
+}
+
+.ifoot{
+  width: 18px;
+  padding-left: 10px;
+}
+
+/* this is column system */
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col {
+  float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%;}
+
+.offset{
+  padding: 15px 0px;
+}
+
+@media (max-width:600px) {
+  .nav{
+    width: 100%;
+  }
+
+  .nav .logo{
+    font-size: 14px;
+  }
+
+  .logo span{
+    font-size: 30px;
+  }
+
+  .nav .link:not(:first-child){display: none;}
+
+  .nav .icon{
+    display: inline-block;
+    float: right;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .nav.responsive{
+    position: fixed;
+  }
+
+  .nav.responsive .icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .nav.responsive .link{
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav.responsive .link .nav-link{
+    display: block;
+    padding: 20px 20px;
+    font-size: 15px;
+  }
+
+  .footer-content .col-2{
+    width: 150px;
+  }
+
+  .foot a,
+  .foot .content-foot{
+    font-size: 12px;
+  }
+
+  .footer-content .col-3{
+    width: 290px;
+    margin-left: 35px;
+  }
+
+  .footer-widget.link{
+    margin-left: 10px;
+
+  }
+
+  .foot .footer-widget .aboutf,
+  .foot .footer-widget .galery{
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .foot .footer-widget .text{
+    text-align: justify;
+    padding-right: 0px;
+  }
+
+  .foot img{
+    width: 91px;
+    margin: 0px 5px 5px 0px;
+    float: left;
+    transition: 0.4s;
+  }
+
+  .foot .copyright{
+    font-size: 12px;
+  }
+}
